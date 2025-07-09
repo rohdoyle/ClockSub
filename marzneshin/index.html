@@ -623,7 +623,7 @@
       window.app = {
         darkMode: true,
         currentLang: 'fa',
-        avatarUrl: 'https://i.postimg.cc/jdrjCggH/MrClock.jpg',
+        avatarUrl: 'https://raw.githubusercontent.com/rohdoyle/public-assets/refs/heads/main/icons/rohv2ray.png',
 
         translations: {
           fa: {
@@ -659,14 +659,14 @@
             configLink: 'لینک کانفیگ',
             downloadApps: 'دانلود برنامه‌ها',
             downloadAppsDesc: 'با توجه به سیستم عامل خود برنامه مورد نظر را دانلود کنید',
-            hiddifyWindows: 'Hiddify ویندوز',
-            hiddifyAndroid: 'Hiddify اندروید',
-            hiddifyApple: 'Hiddify اپل',
+            happWindows: 'happ ویندوز',
+            happAndroid: 'happ اندروید',
+            happApple: 'happ اپل',
             singboxAndroid: 'Sing-Box اندروید',
             singboxApple: 'Sing-Box اپل',
             addSubscription: 'افزودن اشتراک',
             addSubscriptionDesc: 'با توجه به برنامه ای که نصب کرده اید روی دکمه مربوط به آن کلیک کنید',
-            hiddifySettings: 'تنظیمات هیدیفای',
+            happSettings: 'تنظیمات happ',
             singboxSettings: 'تنظیمات سینگ باکس',
             connectAndUse: 'اتصال و استفاده',
             connectAndUseDesc: 'توصیه می‌شود روزانه آپدیت و همه‌ی کانفیگ ها بررسی و تست شوند تا به بهترین کانفیگ با بهترین پینگ وصل شوید که اتصال پایداری داشته باشید.',
@@ -709,14 +709,14 @@
             configLink: 'Config Link',
             downloadApps: 'Download Apps',
             downloadAppsDesc: 'Download the appropriate app for your operating system',
-            hiddifyWindows: 'Hiddify Windows',
-            hiddifyAndroid: 'Hiddify Android',
-            hiddifyApple: 'Hiddify Apple',
+            happWindows: 'happ Windows',
+            happAndroid: 'happ Android',
+            happApple: 'happ Apple',
             singboxAndroid: 'Sing-box Android',
             singboxApple: 'Sing-box Apple',
             addSubscription: 'Add Subscription',
             addSubscriptionDesc: 'Click on the relevant button for the app you have installed',
-            hiddifySettings: 'Hiddify Settings',
+            happSettings: 'happ Settings',
             singboxSettings: 'Sing-box Settings',
             connectAndUse: 'Connect and Use',
             connectAndUseDesc: 'It is recommended to update daily and check/test all configs to connect to the best config with the lowest ping for a stable connection.',
@@ -893,8 +893,8 @@
           window.location.href = `v2rayng://install-config?url=${encodeURIComponent(url)}`;
         },
 
-        importHiddify() {
-          window.location.href = `hiddify://import/${'{{ user.subscription_url }}'}`;
+        importhapp() {
+          window.location.href = `happ://import/${'{{ user.subscription_url }}'}`;
         },
 
         importSingbox() {
@@ -1200,13 +1200,13 @@
                     <svg class="bi" width="16" height="16">
                       <use href="#microsoft"></use>
                     </svg>
-                    <span x-text="translations[currentLang].hiddifyWindows"></span>
+                    <span x-text="translations[currentLang].happWindows"></span>
                   </div>
                   <div class="config-link-buttons">
                     <a class="download-button"
-                      href="https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-Setup-x64.exe"
+                      href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x86.exe"
                       role="button" rel="noopener noreferrer" target="_blank"
-                      @click="handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].start}</span>`); setTimeout(() => window.open('https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-Setup-x64.exe', '_blank'), 300);">
+                      @click="handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].start}</span>`); setTimeout(() => window.open('https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x86.exe', '_blank'), 300);">
                       <svg class="bi" width="16" height="16">
                         <use href="#cloud-arrow-down"></use>
                       </svg>
@@ -1219,13 +1219,13 @@
                     <svg class="bi" width="16" height="16">
                       <use href="#android"></use>
                     </svg>
-                    <span x-text="translations[currentLang].hiddifyAndroid"></span>
+                    <span x-text="translations[currentLang].happAndroid"></span>
                   </div>
                   <div class="config-link-buttons">
                     <a class="download-button"
-                      href="https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk"
+                      href="https://play.google.com/store/apps/details?id=com.happproxy"
                       role="button" rel="noopener noreferrer" target="_blank"
-                      @click="handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].start}</span>`); setTimeout(() => window.open('https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk', '_blank'), 300);">
+                      @click="handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].start}</span>`); setTimeout(() => window.open('https://play.google.com/store/apps/details?id=com.happproxy', '_blank'), 300);">
                       <svg class="bi" width="16" height="16">
                         <use href="#cloud-arrow-down"></use>
                       </svg>
@@ -1238,12 +1238,12 @@
                     <svg class="bi" width="16" height="16">
                       <use href="#apple"></use>
                     </svg>
-                    <span x-text="translations[currentLang].hiddifyApple"></span>
+                    <span x-text="translations[currentLang].happApple"></span>
                   </div>
                   <div class="config-link-buttons">
-                    <a class="download-button" href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532"
+                    <a class="download-button" href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215"
                       role="button" rel="noopener noreferrer" target="_blank"
-                      @click="handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].start}</span>`); setTimeout(() => window.open('https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532', '_blank'), 300);">
+                      @click="handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].start}</span>`); setTimeout(() => window.open('https://apps.apple.com/us/app/happ-proxy-utility/id6504287215', '_blank'), 300);">
                       <svg class="bi" width="16" height="16">
                         <use href="#cloud-arrow-down"></use>
                       </svg>
@@ -1349,11 +1349,11 @@
                     <svg class="bi" width="16" height="16">
                       <use href="#gear-fill"></use>
                     </svg>
-                    <span x-text="translations[currentLang].hiddifySettings"></span>
+                    <span x-text="translations[currentLang].happSettings"></span>
                   </div>
                   <div class="config-link-buttons">
                     <a class="settings-button" href="#"
-                      @click.prevent="importHiddify(); handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].enter}</span>`)">
+                      @click.prevent="importhapp(); handleButtonFeedback($el, $el.innerHTML, `<svg class='bi' width='16' height='16'><use href='#cloud-check'></use></svg> <span>${translations[currentLang].enter}</span>`)">
                       <svg class="bi" width="16" height="16">
                         <use href="#cloud-plus"></use>
                       </svg>
